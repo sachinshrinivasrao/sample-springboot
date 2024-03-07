@@ -1,5 +1,5 @@
 # Use an official OpenJDK runtime as a parent image
-FROM adoptopenjdk:20-jre-hotspot
+FROM openjdk:11-jre-slim
 
 # Set the working directory in the container
 WORKDIR /app
