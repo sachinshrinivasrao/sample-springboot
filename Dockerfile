@@ -6,6 +6,6 @@ WORKDIR /app
 
 # Copy the packaged JAR file into the container at the working directory
 COPY demo-0.0.1-SNAPSHOT.jar /app/demo-0.0.1-SNAPSHOT.jar
-
+EXPOSE 8080
 # Specify the command to run on container start
 CMD ["java", "-jar", "/demo-0.0.1-SNAPSHOT.jar"]
