@@ -38,13 +38,13 @@ jobs:
         run: gcloud config set project ${{ secrets.GCP_PROJECT_ID }}
 
       - name: Build Docker image
-        run: docker build --no-cache -t kubernetesgcr/${{ secrets.GCP_PROJECT_ID }}/flask-image:${{ github.sha }} .
+        run: docker build --no-cache -t kubernetesgcr/${{ secrets.GCP_PROJECT_ID }}/sampleapp:${{ github.sha }} .
       
       - name: Configure Docker for GCR
         run: gcloud auth configure-docker -q
 
       - name: Push Docker image to GCR
-        run: docker push kubernetesgcr/${{ secrets.GCP_PROJECT_ID }}/flask-image:${{ github.sha }}
+        run: docker push kubernetesgcr/${{ secrets.GCP_PROJECT_ID }}/sampleapp:${{ github.sha }}
 
       - name: Install Kubernetes tools
         run: |
