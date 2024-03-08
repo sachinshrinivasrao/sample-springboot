@@ -7,15 +7,15 @@ spec:
    replicas: 1
    selector:
       matchLabels:
-         sb: springboot
+         sb: flask
    template:
       metadata:
          labels:
-            sb: springboot
+            sb: flask
       spec:
          containers:
-            - name: springboot-site
-              image: gcr.io/${{ secrets.GCP_PROJECT_ID }}/samplespringboot:latest
+            - name: flask-site
+              image: gcr-kubernetes/${{ secrets.GCP_PROJECT_ID }}/flask-image:latest
               imagePullPolicy: Always
               
 ---
@@ -27,7 +27,7 @@ metadata:
 spec:
    type: NodePort
    selector:
-      sb: springboot
+      sb: flask
    ports:
       - port: 3000
         targetPort: 3000
