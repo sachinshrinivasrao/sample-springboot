@@ -1,1 +1,6 @@
+<<<<<<< HEAD
 *.yaml    merg=union
+=======
+*.yaml    merg=union
+
+>>>>>>> bbc144a1e23dd17dcf9ce9370dd2c8dcc50bd020

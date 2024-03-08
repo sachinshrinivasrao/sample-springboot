@@ -7,15 +7,15 @@ spec:
    replicas: 1
    selector:
       matchLabels:
-         bb: springboot
+         bb: web
    template:
       metadata:
          labels:
-            bb: springboot
+            bb: web
       spec:
          containers:
-            - name: springboot-site
-              image: kubernetesgcr/${{ secrets.GCP_PROJECT_ID }}/samplespringboot:latest
+            - name: bb-site
+              image: gcr.io/${{ secrets.GCP_PROJECT_ID }}/sampleapp:latest
               imagePullPolicy: Always
               
 ---
