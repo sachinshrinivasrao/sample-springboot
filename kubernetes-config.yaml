@@ -15,7 +15,7 @@ spec:
       spec:
          containers:
             - name: flask-site
-              image: gcr-kubernetes/${{ secrets.GCP_PROJECT_ID }}/flask-image:latest
+              image: gcp-kubernetes/${{ secrets.GCP_PROJECT_ID }}/flask-image:latest
               imagePullPolicy: Always
               
 ---
