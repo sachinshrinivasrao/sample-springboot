@@ -15,7 +15,7 @@ spec:
       spec:
          containers:
             - name: springboot-site
-              image: gcr.io/${{ secrets.GCP_PROJECT_ID }}/samplespringboot:latest
+              image: kubernetesgcr/${{ secrets.GCP_PROJECT_ID }}/samplespringboot:latest
               imagePullPolicy: Always
               
 ---
